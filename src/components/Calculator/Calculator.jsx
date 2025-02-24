@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React,  { useState } from "react";
 import DisplayWindow from "./DisplayWindow";
 import KeysWindow from "./KeysWindow";
-import './Calculator.css'
+import './Calculator.css';
+import {evaluate} from 'mathjs';
 
 const Calculator = () => {
   const [expression, setExpression] = useState("");
@@ -9,11 +10,10 @@ const Calculator = () => {
   const [result, setResult] = useState("0");
   const sciFunc = {
 };
-
   function calcResult() {
     if (expression.length !== 0) {
       try {
-        let compute = eval(expression);
+        let compute = evaluate(expression);
         compute = parseFloat(compute.toFixed(4));
         setResult(compute);
       } catch (error) {
