@@ -1,0 +1,104 @@
+button {
+    border: none;
+    outline: none;
+    appearance: none;
+    background: transparent;
+    color: inherit;
+  }
+  
+.calculator {
+    border: 3px solid rgba(255, 255, 255, 0.486);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 5rem;
+  }
+  
+  .displayWindow {
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    height: 150px;
+    flex-direction: column;
+  }
+  
+  .displayWindow .expression {
+    overflow-x: auto;
+    width: 100%;
+    text-align: right;
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+    scrollbar-width: none;
+    margin-top: 5px;
+  }
+  
+  .displayWindow .result {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-left: 5px;
+    width:  auto;
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  .keysWindow {
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .keysWindow button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.3rem;
+    cursor: Pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+  
+  }
+  
+  .keysWindow button:hover {
+    background-color: rgba(9, 7, 29, 0.356);
+  }
+  
+
+  .keys_basic {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .keys_basic .equal {
+    background-color: #00ff62;
+    color: #0f0f0f;
+  }
+  
+  .keys_basic .number {
+    color: white;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 610px) {
+    body {
+      padding: 1rem;
+    }
+  
+    .keysWindow {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .line {
+      display: none;
+    }
+  
+    .keys_scientific {
+      width: 100%;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
