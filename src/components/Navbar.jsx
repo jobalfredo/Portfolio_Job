@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/Cat.gif'
+import logo from '../assets/JobTan.png'
 import { Link } from 'react-router-dom'
 import resume from '../assets/Resume.pdf'
 import './Navbar.css'
